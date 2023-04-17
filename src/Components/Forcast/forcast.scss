@@ -1,0 +1,82 @@
+.Forcast {
+    padding-top: 50px;
+  .title {
+    font-size: 23px;
+    font-weight: 700;
+    padding: 20px;
+  }
+
+  .daily-item {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    height: 40px;
+    margin: 5px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    padding: 5px 20px;
+    gap: 5px;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+    .icon-small {
+      width: 40px;
+    }
+    .day {
+      cursor: inherit;
+      color: #212121;
+      flex: 1 1;
+      font-weight: 600;
+      margin-left: 15px;
+      @media (max-width: 500px) {
+        margin: 0;
+      }
+    }
+    .description {
+      cursor: inherit;
+      flex: 1 1;
+      margin-right: 15px;
+      text-align: right;
+      text-align: center;
+      @media (max-width: 500px) {
+        margin: 0;
+      }
+    }
+    .min-max {
+      color: #757575;
+      text-align: center;
+    }
+  }
+  .daily-details-grid {
+    grid-row-gap: 0;
+    grid-column-gap: 15px;
+    -webkit-column-gap: 15px;
+    column-gap: 15px;
+    display: grid;
+    flex: 1 1;
+    grid-template-columns: auto auto;
+    padding: 5px 15px;
+    row-gap: 0;
+    .daily-details-grid-item {
+      align-items: center;
+      display: flex;
+      height: 40px;
+      justify-content: space-between;
+      label {
+        &:first-child {
+          color: #757575;
+          line-height: 15px;
+        }
+        &:last-child {
+          line-height: 15px;
+          color: #212121;
+        }
+      }
+    }
+  }
+}

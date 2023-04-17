@@ -1,0 +1,82 @@
+.CurrWeather{
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 5px 0px 30px 0px rgb(0 0 0 /15%);
+    color: #333;
+    background-color: white;
+    margin: 20px auto 0 auto;
+    padding: 0 20px 20px 20px;
+    @media (max-width:500px) {
+        width: auto;
+    }
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text{
+            text-transform: capitalize;
+            .city{
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 1;
+                margin: 0 0 15px 0;
+                letter-spacing: 1px;
+
+            }
+            .desc{
+                font-weight: 400;
+                font-weight: 14;
+                line-height: 1;
+                margin: 0;
+            }
+            img{
+                width: 100px;
+
+            }
+        }
+    }
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width:500px) {
+            flex-direction: column;
+        }
+        .temp{
+            font-weight: 600;
+            font-size: 70px;
+            width: auto;
+            letter-spacing: -5px;
+            margin: 10px 0;
+        }
+        .details{
+            width: 100%;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            @media (max-width:500px) {
+                padding: 0 20px;
+            }
+            .parameter-row{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .top{
+                    border-bottom: 1px solid white;
+                }
+                .para-label{
+                    text-align: left;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                }
+                .para-value{
+                    text-align: right;
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
