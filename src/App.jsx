@@ -23,12 +23,11 @@ function App() {
         setForcast({ city: searchData.label, ...forcastResponse })
       }).catch((err) => console.log(err))
   }
-  const [isLoader, setIsLoader] = useState(false)
+  const [isLoader, setIsLoader] = useState(true)
   useEffect(() => {
-    setIsLoader(true)
     setTimeout(() => {
       setIsLoader(false)
-    }, 2000);
+    }, 2500);
   }, [])
   return (
     <div className={isLoader?'':'Container'}>
